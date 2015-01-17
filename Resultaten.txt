@@ -1,0 +1,49 @@
+Batch filters:
+java -cp ./weka.jar weka.filters.unsupervised.attribute.StringToWordVector -b -i traintxt.arff -o "C:\Users\Timo\Documents\GitHub\Data Mining\BCSource\output_train.arff" -c last -r testtxt.arff -s "C:\Users\Timo\Documents\GitHub\Data Mining\BCSource\output_test.arff" -R 1,2 -O -C -T -I -N 1 -M 1 -S -L
+
+java -cp ./weka.jar weka.filters.supervised.attribute.AttributeSelection -E "weka.attributeSelection.InfoGainAttributeEval -M" -S "weka.attributeSelection.Ranker -T 0 -N -1" -b -i "C:\Users\Timo\Documents\GitHub\Data Mining\BCSource\output_test_AaC.arff" -o "C:\Users\Timo\Documents\GitHub\Data Mining\BCSource\output_test_AttSel.arff" -r "C:\Users\Timo\Documents\GitHub\Data Mining\BCSource\output_train_AaC.arff" -s "C:\Users\Timo\Documents\GitHub\Data Mining\BCSource\output_train_AttSel.arff"
+
+
+
+Resultaten tot nu toe:
+
+RandomForest met numFeatures = 100 (want er zijn ong. 1000 attributes) en numTrees = 500
+geeft 93.333% accuracy.
+
+J48 met default waarden geeft 86.667% accuracy. De gegeven tree is:
+holmes <= 0
+|   west <= 2.278864
+|   |   dr <= 0
+|   |   |   mr <= 0.674244
+|   |   |   |   staring <= 0: Mark Twain (26.0/1.0)
+|   |   |   |   staring > 0: Charles Dickens (4.0/1.0)
+|   |   |   mr > 0.674244: Charles Dickens (21.0)
+|   |   dr > 0: Sir Arthur Conan Doyle (2.0)
+|   west > 2.278864: Sir Arthur Conan Doyle (8.0)
+holmes > 0: Sir Arthur Conan Doyle (14.0)
+
+NaiveBayes met defaultwaarden geeft 93.333% accuracy
+
+Na attribute selection dmv infogain en ranker (zie boven):
+
+
+Random Forest met numFeatures = 9 (oftewel sqrt(numAttributes)) en numTrees = 500 (the bigger the better)
+geeft 100% accuracy
+
+J48 met default waarden geeft 46.67% accuracy. De gegeven tree is:
+holmes <= 0
+|   -- <= 1.108429
+|   |   nervous <= 1.319578
+|   |   |   mr <= 0.674244
+|   |   |   |   food <= 0.810511: Mark Twain (25.0/2.0)
+|   |   |   |   food > 0.810511
+|   |   |   |   |   boys <= 0: Charles Dickens (3.0)
+|   |   |   |   |   boys > 0: Mark Twain (2.0)
+|   |   |   mr > 0.674244: Charles Dickens (22.0/1.0)
+|   |   nervous > 1.319578: Sir Arthur Conan Doyle (4.0)
+|   -- > 1.108429: Sir Arthur Conan Doyle (5.0)
+holmes > 0: Sir Arthur Conan Doyle (14.0)
+
+NaiveBayes met defaultwaarden geeft 93.33% accuracy
+
+
