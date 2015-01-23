@@ -25,11 +25,40 @@ Our classifier is written in Java[^Java], making heavy use of the Weka[^Weka] da
 
 ### Application domain and research problem
 
+The research problem underlying this project can be formulated as follows:
+
+> Is it possible to construct and apply a text-based classifier, trained on works by English authors, in order to predict the author of an unseen book?
+
+We have approached this problem from a text mining perspective, applying three different existing text classification algorithms to a data set of a fixed number of authors.
+
+We have opted to classify English works because these are readily available (more on this in section <font color="red">XXX</font>). We have also opted to classify *only* English works because it is trivial to predict the author (from a possibility of three authors), if all three authors write in a different language. Last but not least, the language English is written using the Latin script, which is easily interpreted by us and readily supported by Weka.
+
+Nevertheless, we strongly suspect our classifier will perform well on works in other languages, and even other scripts (provided Weka/Java support these).
+
 ### Related previous work
+
+The choice of subject for this project was arrived at by first attempting to solve a similar problem, as proposed in the first draft of our project proposal. This proposal was to classify sentences from scientific papers based on word usage into one of five categories:
+
+1. Aim: sentences about the specific research goal of of the paper.
+2. Own: sentences about the author's own work, e.g. methods, results and conclusions.
+3. Contrast: sentences describing contrast, comparison or critique of past work.
+4. Basis: sentences about work that provide the basis for the work of the paper.
+5. Misc: Any other sentences.
+
+For the full project proposal, refer to the additional files.
+
+Based on feedback from Prof. dr. Tom Heskes we decided against continuing with this problem. Instead, we chose to create a similar problem (text classification) with a larger data set. This resulted in the research problem as presented in this report.
+
+An inspiration for this type of problem came from Simone Teufel's PhD thesis on Argumentative Zoning[^ArgumentativeZoning].
+
+Finally, we cite a classical text mining problem, namely the problem of predicting the sentiment of IMDB movie reviews based on 1,000 positive and 1,000 negative reviews, as an inspiration and introduction to this type of problem.[^Sentiment]
+
+[^ArgumentativeZoning]: Teufel, S. (1999). Argumentative Zoning. Retrieved January 23, 2015, from http://www.cl.cam.ac.uk/~sht25/az.html
+[^Sentiment]:WEKA Text Classification for First Time & Beginner Users. (n.d.). Retrieved January 23, 2015, from https://www.youtube.com/watch?v=IY29uC4uem8
 
 ### Data set / data set collection
 
-Our data set consists of classic English literary works in the public domain. Many works of English authors can be found online, via initiatives such as the Gutenberg project[^Gutenberg], Wikisource[^Wikisource], and Wikilivres[^Wikilivres]. It is, unsurprisingly, from these sources that we have compiled our dataset. 
+Our data set consists of classic English literary works in the public domain. Many works of English authors can be found online, via initiatives such as the Gutenberg project[^Gutenberg], Wikisource[^Wikisource], and Wikilivres[^Wikilivres]. It is, perhaps unsurprisingly, from these sources that we have compiled our data set. 
 
 We have created two datasets of three authors, six books per author, first five chapters per book. This set was then split into a training set of five books (per author) and a test set of one book (per author). The reasoning behind creating two datasets was twofold:
 
