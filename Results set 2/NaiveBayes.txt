@@ -1,0 +1,68 @@
+Geen Attribute Selection
+
+======NaiveBayes parameters======
+<None>
+
+
+======Results======
+
+Correctly Classified Instances          14               93.3333 %
+Incorrectly Classified Instances         1                6.6667 %
+Kappa statistic                          0.9   
+Mean absolute error                      0.0444
+Root mean squared error                  0.2108
+Relative absolute error                 10      %
+Root relative squared error             44.7214 %
+Total Number of Instances               15     
+
+
+======Confusion Matrix======
+
+ a b c   <-- classified as
+ 5 0 0 | a = George Orwell
+ 1 4 0 | b = Herman Melville
+ 0 0 5 | c = Jane Austen
+
+
+======Class Details======
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 1         0.1        0.833     1         0.909      0.95     George Orwell
+                 0.8       0          1         0.8       0.889      0.9      Herman Melville
+                 1         0          1         1         1          1        Jane Austen
+Weighted Avg.    0.933     0.033      0.944     0.933     0.933      0.95 
+
+
+Wel Attribute Selection
+
+======NaiveBayes parameters======
+<None>
+
+
+======Results======
+
+Correctly Classified Instances          13               86.6667 %
+Incorrectly Classified Instances         2               13.3333 %
+Kappa statistic                          0.8   
+Mean absolute error                      0.0752
+Root mean squared error                  0.2563
+Relative absolute error                 16.9117 %
+Root relative squared error             54.3639 %
+Total Number of Instances               15     
+
+
+======Confusion Matrix======
+
+ a b c   <-- classified as
+ 5 0 0 | a = George Orwell
+ 1 4 0 | b = Herman Melville
+ 0 1 4 | c = Jane Austen
+
+
+======Class Details======
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 1         0.1        0.833     1         0.909      1        George Orwell
+                 0.8       0.1        0.8       0.8       0.8        0.94     Herman Melville
+                 0.8       0          1         0.8       0.889      1        Jane Austen
+Weighted Avg.    0.867     0.067      0.878     0.867     0.866      0.98 

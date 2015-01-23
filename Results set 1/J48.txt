@@ -1,0 +1,70 @@
+Geen Attribute Selection
+
+======J48 parameters======
+Confidence factor = 0.25
+Minimum number of instances per leaf = 2
+
+======Results======
+
+Correctly Classified Instances          13               86.6667 %
+Incorrectly Classified Instances         2               13.3333 %
+Kappa statistic                          0.8   
+Mean absolute error                      0.094 
+Root mean squared error                  0.2929
+Relative absolute error                 21.1538 %
+Root relative squared error             62.1365 %
+Total Number of Instances               15     
+
+
+======Confusion Matrix======
+
+ a b c   <-- classified as
+ 4 1 0 | a = Charles Dickens
+ 1 4 0 | b = Mark Twain
+ 0 0 5 | c = Sir Arthur Conan Doyle
+
+
+======Class Details======
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.8       0.1        0.8       0.8       0.8        0.9      Charles Dickens
+                 0.8       0.1        0.8       0.8       0.8        0.85     Mark Twain
+                 1         0          1         1         1          1        Sir Arthur Conan Doyle
+Weighted Avg.    0.867     0.067      0.867     0.867     0.867      0.917
+
+
+
+
+Wel Attribute Selection
+
+======J48 parameters======
+Confidence factor = 0.25
+Minimum number of instances per leaf = 2
+
+======Results======
+
+Correctly Classified Instances          13               86.6667 %
+Incorrectly Classified Instances         2               13.3333 %
+Kappa statistic                          0.8   
+Mean absolute error                      0.094 
+Root mean squared error                  0.2929
+Relative absolute error                 21.1538 %
+Root relative squared error             62.1365 %
+Total Number of Instances               15     
+
+
+======Confusion Matrix======
+
+ a b c   <-- classified as
+ 4 1 0 | a = Charles Dickens
+ 1 4 0 | b = Mark Twain
+ 0 0 5 | c = Sir Arthur Conan Doyle
+
+
+======Class Details======
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.8       0.1        0.8       0.8       0.8        0.9      Charles Dickens
+                 0.8       0.1        0.8       0.8       0.8        0.85     Mark Twain
+                 1         0          1         1         1          1        Sir Arthur Conan Doyle
+Weighted Avg.    0.867     0.067      0.867     0.867     0.867      0.917

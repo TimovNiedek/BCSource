@@ -1,0 +1,71 @@
+Geen Attribute Selection
+
+======RandomForest parameters======
+Number of features = 32
+Number of trees = 500
+
+
+======Results======
+
+Correctly Classified Instances          15              100      %
+Incorrectly Classified Instances         0                0      %
+Kappa statistic                          1     
+Mean absolute error                      0.258 
+Root mean squared error                  0.2825
+Relative absolute error                 58.04   %
+Root relative squared error             59.9177 %
+Total Number of Instances               15     
+
+
+======Confusion Matrix======
+
+ a b c   <-- classified as
+ 5 0 0 | a = George Orwell
+ 0 5 0 | b = Herman Melville
+ 0 0 5 | c = Jane Austen
+
+
+======Class Details======
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 1         0          1         1         1          1        George Orwell
+                 1         0          1         1         1          1        Herman Melville
+                 1         0          1         1         1          1        Jane Austen
+Weighted Avg.    1         0          1         1         1          1    
+
+
+
+Wel Attribute Selection
+
+======RandomForest parameters======
+Number of features = 32
+Number of trees = 500
+
+
+======Results======
+
+Correctly Classified Instances          15              100      %
+Incorrectly Classified Instances         0                0      %
+Kappa statistic                          1     
+Mean absolute error                      0.2139
+Root mean squared error                  0.2406
+Relative absolute error                 48.12   %
+Root relative squared error             51.045  %
+Total Number of Instances               15     
+
+
+======Confusion Matrix======
+
+ a b c   <-- classified as
+ 5 0 0 | a = George Orwell
+ 0 5 0 | b = Herman Melville
+ 0 0 5 | c = Jane Austen
+
+
+======Class Details======
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 1         0          1         1         1          1        George Orwell
+                 1         0          1         1         1          1        Herman Melville
+                 1         0          1         1         1          1        Jane Austen
+Weighted Avg.    1         0          1         1         1          1    
